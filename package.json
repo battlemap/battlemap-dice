@@ -1,0 +1,10 @@
+{
+  "name": "battlemap-dice",
+  "version": "0.1.0",
+  "description": "Set of classes for interactive dice rolling.",
+  "main": "index.js",
+  "repository": "https://github.com/battlemap/battlemap-dice",
+  "author": "Patrick Byrne",
+  "license": "MIT",
+  "private": false
+}
