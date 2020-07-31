@@ -1,6 +1,4 @@
-const Die = require("./die")
-const DieFace = require("./die-face")
-const DieRoll = require("./die-roll")
+const {Die,DieFace} = require("./index")
 
 describe("Die", () => {
   describe("new", () => {
@@ -23,14 +21,14 @@ describe("Die", () => {
 
   describe(".roll()", () => {
     test("selects a random side", () => {
-      const face1 = new DieFace({display: 1, value: 1})
-      const face2 = new DieFace({display: 2, value: 2})
-      const die = new Die([face1, face2])
+      const die = new Die([
+        new DieFace({display: 1, value: 1}),
+        new DieFace({display: 2, value: 2}),
+      ])
 
       const result = die.roll()
 
-      expect(result).toBeInstanceOf(DieRoll)
-      expect(die.faces).toContain(result.face)
+      expect(die.faces).toContain(result)
     })
   })
 })

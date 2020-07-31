@@ -1,4 +1,3 @@
-const DieRoll = require("./die-roll")
 const DieFace = require("./die-face")
 
 class Die {
@@ -13,13 +12,11 @@ class Die {
   }
 
   roll() {
-    // Math.floor(Math.random() * Math.floor(this.sides))
-    return new DieRoll(this.randomFace())
+    return this.faces[this.randomIndex()]
   }
 
-  randomFace() {
-    const index = Math.floor(Math.random() * Math.floor(this.faces.length))
-    return this.faces[index]
+  randomIndex() {
+    return Math.floor(Math.random() * Math.floor(this.faces.length))
   }
 }
 
