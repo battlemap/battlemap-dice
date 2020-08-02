@@ -17,7 +17,6 @@ describe("DieFace", () => {
     })
 
     test("it does not accept a missing value option", () => {
-      console.log("TEST")
       expect(() => {new DieFace({display: "foo"})}).toThrow()
     })
   })
